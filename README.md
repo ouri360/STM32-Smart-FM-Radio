@@ -18,10 +18,10 @@ Le routage des périphériques a été pensé pour centraliser les communication
 * **Entrées/Sorties (GPIO) :** Configuration en entrée pour trois boutons physiques (BP1, BP2, BP3) assurant la navigation, et en sortie pour le pilotage d'indicateurs LED (RGB/User).
 * **Chaîne Audio :** Le signal de sortie de la puce radio (Lout/Rout) est amplifié par un module PAM8403 (2x 3W) avant d'arriver sur les haut-parleurs.
 
-![Bord du modèle et bus I2C](assets/Bord du modèle + I2C.png)
+![Bord du modèle et bus I2C](assets/Bord_du_modele.png)
 *Image 1 : Bord du modèle et bus I2C*
 
-![Diagramme des flots de données](assets/Flow de données diagramme.png)
+![Diagramme des flots de données](assets/Flow_de_données.png)
 *Image 2 : Diagramme des flots de données*
 
 ## 3. Architecture Logicielle et Pilotes (Drivers)
@@ -51,7 +51,7 @@ Dans une optique de conception robuste, le système ne doit jamais être en erre
 ### 3.6. Décodage du signal RDS en temps réel
 Afin d'améliorer l'expérience utilisateur, le projet intègre la récupération du nom de la station diffusée. Cette opération de traitement de données est gérée par la fonction `RDA_UpdateRDSName`, appelée en tâche de fond dans la boucle principale (`while` du `main.c`). La puce radio ne fournissant pas une chaîne de caractères complète, l'algorithme lit les registres matériels (Blocs B, D et F) pour récupérer les lettres diffusées deux par deux. La fonction intègre un filtrage du taux d'erreur du bloc matériel (BLERB < 2) pour ignorer les données corrompues. Les caractères valides (ASCII) sont ensuite assemblés dans une variable globale qui met à jour l'écran OLED dynamiquement avec le nom de la station sur la page principale. En cas d'erreur, ou si la fonction n'arrive pas à récupérer un nom, "Station" est laissé par défaut.
 
-![Machine d'état du fonctionnement de la boucle principale](assets/Machine d'état pour la gestion.png)
+![Machine d'état du fonctionnement de la boucle principale](assets/Machine_etat_gestion_while.png)
 *Image 3 : Machine d'état du fonctionnement de la boucle principale*
 
 ## 4. Logique de navigation et interface (IHM)
@@ -65,7 +65,7 @@ Le passage d'une vue à l'autre et la modification des paramètres s'effectuent 
 
 ### 4.1. Modélisation de la logique de menu & boutons
 
-![Machine d'état pour l'IHM et diagramme de flot d'états pour l'affichage](assets/Machine d'état IHM + flow d'état affichage diagramme.png)
+![Machine d'état pour l'IHM et diagramme de flot d'états pour l'affichage](assets/Machine_etat_IHM.png)
 *Image 4 : Machine d'état pour l'IHM et diagramme de flot d'états pour l'affichage*
 
 ### 4.2. Matrice d'états des boutons
