@@ -2,7 +2,7 @@
 
 **Auteur :** ROMERO Tommy
 
-![Photo du récepteur radio FM](assets/Photo_principal.png)
+![Photo du récepteur radio FM](assets/Photo_principal.jpg)
 
 ## 1. Présentation Générale du Projet
 
