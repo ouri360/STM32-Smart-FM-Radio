@@ -2,6 +2,8 @@
 
 **Auteur :** ROMERO Tommy
 
+![Photo du récepteur radio FM](assets/Photo_principal.png)
+
 ## 1. Présentation Générale du Projet
 
 Ce projet consiste en la conception et le développement complet d'un système embarqué interactif : un récepteur radio FM. Articulé autour d'un microcontrôleur de la famille STM32, le dispositif intègre une gestion matérielle avancée (puce radio) et une Interface Homme-Machine (IHM) optimisée pour des ressources contraintes.
@@ -94,3 +96,6 @@ La réalisation de ce projet valide la maîtrise d'une chaîne complète de dév
 * Mise en œuvre et débogage de bus de communication série inter-composants (I2C).
 * Acquisition analogique (ADC) et traitement des données brutes.
 * Conception algorithmique asynchrone (machine d'états temporelle) et optimisation de l'empreinte mémoire pour la création d'IHM sur des systèmes à ressources limitées.
+
+![Vidéo de fonctionnement du récepteur radio FM](assets/Video_Station_FM_Compress.mp4)
+*Vidéo : Fonctionnement du récepteur radio FM*
