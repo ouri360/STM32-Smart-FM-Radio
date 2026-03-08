@@ -97,5 +97,8 @@ La réalisation de ce projet valide la maîtrise d'une chaîne complète de dév
 * Acquisition analogique (ADC) et traitement des données brutes.
 * Conception algorithmique asynchrone (machine d'états temporelle) et optimisation de l'empreinte mémoire pour la création d'IHM sur des systèmes à ressources limitées.
 
-![Vidéo de fonctionnement du récepteur radio FM](assets/Video_Station_FM_Compress.mp4)
-*Vidéo : Fonctionnement du récepteur radio FM*
+## 6. Démonstration vidéo
+
+Voici le récepteur radio en fonctionnement, illustrant la navigation dans les menus et le décodage RDS en temps réel :
+
+<video src="assets/Video_Station_FM_Compress.mp4" width="100%" controls="controls"></video>
