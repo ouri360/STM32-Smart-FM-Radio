@@ -101,4 +101,4 @@ La réalisation de ce projet valide la maîtrise d'une chaîne complète de dév
 
 Voici le récepteur radio en fonctionnement, illustrant la navigation dans les menus et le décodage RDS en temps réel :
 
-<video src="assets/Video_Station_FM_Compress.mp4" width="100%" controls="controls"></video>
+https://github.com/user-attachments/assets/19f63d3d-1a36-4abc-9978-a1067e6fac4d
